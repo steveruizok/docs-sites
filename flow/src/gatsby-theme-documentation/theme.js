@@ -116,22 +116,24 @@ export default {
 			fontFamily: 'monospace',
 			fontSize: 1,
 			p: 3,
-			color: 'text',
-			bg: 'muted',
+			color: '#666',
+			bg: '#fdfdfd',
+			borderRadius: 12,
+			border: '1px solid #efefef',
 			overflow: 'auto',
 			code: {
 				color: 'inherit',
 			},
 		},
 		code: {
-			fontFamily: 'monospace',
-			color: 'secondary',
+			fontFamily: 'Roboto Mono, monospace',
+			color: '#666',
 			fontSize: 1,
 		},
 		inlineCode: {
-			fontFamily: 'monospace',
-			color: 'secondary',
-			bg: 'muted',
+			fontFamily: 'Roboto Mono, monospace',
+			color: '#666',
+			bg: '#fdfdfd',
 		},
 		table: {
 			width: '100%',
@@ -163,95 +165,70 @@ export default {
 	},
 	prism: {
 		[[
-			'.comment',
-			'.prolog',
-			'.doctype',
 			'.cdata',
-			'.punctuation',
-			'.operator',
+			'.comment',
+			'.doctype',
 			'.entity',
+			'.operator',
+			'.prolog',
+			'.punctuation',
 			'.url',
+			'.operator',
 		]]: {
-			color: 'primary',
+			color: '#999999',
 		},
 		'.comment': {
 			fontStyle: 'italic',
 		},
 		[[
-			'.property',
-			'.tag',
 			'.boolean',
-			'.number',
+			'.class-name',
 			'.constant',
-			'.symbol',
 			'.deleted',
 			'.function',
-			'.class-name',
-			'.regex',
 			'.important',
+			'.property',
+			'.regex',
+			'.symbol',
+			'.tag',
 			'.variable',
 		]]: {
-			color: 'muted',
+			color: '#ff8800',
+		},
+		[['.number']]: {
+			color: '#33aaee',
+		},
+		[['.constant']]: {
+			color: '#00bbcc',
 		},
 		[['.atrule', '.attr-value', '.keyword']]: {
-			color: 'muted',
+			color: '#0bf',
+		},
+		[['.regex', '.important', '.variable']]: {
+			color: '#3c3b68',
+		},
+		[['.important', '.bold']]: {
+			fontWeight: 500,
+		},
+		[['.italic']]: {
+			fontStyle: 'italic',
+		},
+		[['.entity']]: {
+			cursor: 'help',
+		},
+		[['.has-highlight-line .line:not(.highlight-line)']]: {
+			opacity: '0.25',
 		},
 		[[
-			'.selector',
+			'.attr-value',
 			'.attr-name',
-			'.string',
-			'.char',
 			'.builtin',
+			'.char',
 			'.inserted',
+			'.selector',
+			'.string',
 		]]: {
-			color: 'muted',
+			color: '#8855ff',
 		},
 	},
-	// 	[['namespace']]: {
-	// 		opacity: 0.7,
-	// 	},
-	// 	[[
-	// 		'.comment',
-	// 		'.prolog',
-	// 		'.doctype',
-	// 		'.cdata',
-	// 		'.punctuation',
-	// 		'.operator',
-	// 		'.entity',
-	// 		'.url',
-	// 	]]: {
-	// 		color: '#666666',
-	// 	},
-	// 	[[
-	// 		'.property',
-	// 		'.tag',
-	// 		'.boolean',
-	// 		'.number',
-	// 		'.constant',
-	// 		'.symbol',
-	// 		'.deleted',
-	// 		'.function',
-	// 		'.class-name',
-	// 	]]: {
-	// 		color: '#ff8800',
-	// 	},
-	// 	[['.operator']]: {
-	// 		color: '#999999',
-	// 	},
-	// 	[['.number']]: {
-	// 		color: '#f97f97',
-	// 	},
-	// 	[['.atrule', '.attr-value', '.keyword']]: {
-	// 		color: '#33aaee',
-	// 	},
-	// 	[['.entity', '.url', 'string', '.regex', '.important', 'variable']]: {
-	// 		color: '#3c3b68',
-	// 	},
-	// 	[['.atrule', '.keyword']]: {
-	// 		color: '#0bf0bf',
-	// 	},
-	// 	[['.regex', '.important', 'variable']]: {
-	// 		color: '#0bf0bf',
-	// 	},
-	// },
 }
